@@ -1,5 +1,7 @@
+'use client'
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 // import { MenuIcon, XIcon } from '@heroicons/react/solid';
 import { FaBars, FaTimes, FaChurch } from "react-icons/fa";
 
@@ -12,15 +14,14 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <div className="flex-shrink-0">
-              <img className="h-8 w-8" src="/img/logo.svg" alt="Logo" />
+                <Image className="flex" src="/TEC App Icon 08.png" width={50} height={50} alt="Logo" />
+              {/* <img className="h-8 w-8" src="/img/logo.svg" alt="Logo" /> */}
             </div>
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
-                <Link href="/">
-                  <a className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                <Link href="/" className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Home
                 </Link>
-                <Link href="/about">
-                  <a className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">About</a>
+                <Link href="/about" className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">About
                 </Link>
                 {/* More navigation items here */}
               </div>
@@ -37,11 +38,9 @@ const Navbar = () => {
       {isOpen && (
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <Link href="/">
-              <a className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Home</a>
+            <Link href="/" className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Home
             </Link>
-            <Link href="/about">
-              <a className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">About</a>
+            <Link href="/about" className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">About
             </Link>
             {/* More navigation items here */}
           </div>
